@@ -1,0 +1,352 @@
+.cp-header {
+    background: #fff;
+    padding: 1em 1.5em;
+}
+
+.cp-logo {
+    float: left;
+    width: 60%;
+}
+
+.cp-logo {
+    text-align: center;
+}
+
+.cp-logo h2 {
+    font-size: 1.3em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.cp-logo h2 a {
+    font-weight: 300;
+    padding: 2px 0;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.cp-login {
+    text-align: right;
+}
+
+.cp-login a.sign-in {
+    outline: none;
+    display: inline-block;
+}
+
+.top-nav li {
+    display: block;
+}
+
+.top-nav li.menu-title {
+    font-size: 1.4em;
+    padding: 1em 0.8em;
+    text-align: left;
+    color: #000;
+    border-bottom: 1px solid #FFF;
+    text-transform: none;
+    background: #fff;
+    font-family: 'Abel', sans-serif;
+    -webkit-transform: translate3d(0, 500px, 0);
+    -moz-transform: translate3d(0, 500px, 0);
+    -o-transform: translate3d(0, 500px, 0);
+    -ms-transform: translate3d(0, 500px, 0);
+    transform: translate3d(0, 500px, 0);
+}
+
+.show-menu li.menu-title {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.top-nav li a {
+    font-size: 1.1em;
+    color: #000;
+    font-weight: 300;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    transition: .5s all;
+    outline: none;
+    text-decoration: none;
+}
+
+.top-nav li a:hover,
+.top-nav li a.active {
+    background: #2bbb61;
+}
+
+.top-nav i.glyphicon {
+    margin-right: 10px;
+    font-size: .9em;
+}
+
+.content-wrap {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-button::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: -webkit-linear-gradient(#2bbb61 20%, transparent 20%, transparent 40%, #2bbb61 40%, #2bbb61 60%, transparent 60%, transparent 80%, #2bbb61 80%);
+    background: linear-gradient(#2bbb61 20%, transparent 20%, transparent 40%, #2bbb61 40%, #2bbb61 60%, transparent 60%, transparent 80%, #2bbb61 80%);
+    content: '';
+}
+
+.close-button {
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    right: 1em;
+    top: 0.5em;
+    overflow: hidden;
+    text-indent: 1em;
+    font-size: 1.1em;
+    border: none;
+    background: transparent;
+    color: transparent;
+    outline: none;
+    z-index: 999;
+}
+
+.close-button::before,
+.close-button::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    top: 0;
+    left: 7px;
+    background: #2bbb61;
+}
+
+.close-button::before {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.close-button::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.menu-wrap {
+    position: fixed;
+    z-index: 1001;
+    width: 185px !important;
+    height: 100% !important;
+    background: #fff;
+    -webkit-transform: translate3d(-320px, 0, 0);
+    -moz-transform: translate3d(-320px, 0, 0);
+    -o-transform: translate3d(-320px, 0, 0);
+    -ms-transform: translate3d(-320px, 0, 0);
+    transform: translate3d(-320px, 0, 0);
+    -webkit-transition: -webkit-transform 0.4s;
+    -moz-transition: -moz-transform 0.4s;
+    transition: transform 0.4s;
+    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    -moz-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    overflow-y: auto !important;
+}
+
+.icon-list {
+    height: 400px !important;
+    -webkit-transform: translate3d(0, 100%, 0);
+    -moz-transform: translate3d(0, 100%, 0);
+    -o-transform: translate3d(0, 100%, 0);
+    -ms-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    margin-bottom: 1.5em;
+}
+
+.icon-list a {
+    display: block;
+    padding: 0.6em 2em;
+    -webkit-transform: translate3d(0, 500px, 0);
+    -moz-transform: translate3d(0, 500px, 0);
+    -o-transform: translate3d(0, 500px, 0);
+    -ms-transform: translate3d(0, 500px, 0);
+    transform: translate3d(0, 500px, 0);
+}
+
+.show-menu .menu-wrap {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 0.8s;
+    -moz-transition: -moz-transform 0.8s;
+    transition: transform 0.8s;
+    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    -moz-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.show-menu .icon-list,
+.show-menu .icon-list a {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 0.8s;
+    -moz-transition: transform 0.8s;
+    transition: transform 0.8s;
+    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    -moz-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.show-menu .icon-list a {
+    -webkit-transition-duration: 0.9s;
+    -moz-transition-duration: 0.9s;
+    transition-duration: 0.9s;
+}
+
+.mfp-hide {
+    display: none !important;
+}
+
+.booking-info h3 {
+    font-size: 2.1em;
+    text-align: center;
+}
+
+.booking-info h3 a {
+    text-decoration: none;
+}
+
+.styled-input {
+    width: 100%;
+    margin: 2em 0 1em;
+    position: relative;
+}
+
+.wthree-text input[type="checkbox"] {
+    display: none;
+}
+
+.wthree-text input[type="checkbox"]+label {
+    position: relative;
+    padding-left: 1.8em;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #555;
+    cursor: pointer;
+    display: block;
+    font-weight: 400;
+}
+
+.wthree-text input[type="checkbox"]+label span:first-child {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+
+.wthree-text {
+    margin: 2em 0;
+    text-align: right;
+}
+
+.wthree-text ul li {
+    display: inline-block;
+}
+
+.cp-menu-icon,
+.cp-login {
+    float: left;
+    width: 20%;
+    padding: 4px 0;
+}
+
+@media (max-width:640px) {
+    h1,
+    .h1,
+    h2,
+    .h2,
+    h3,
+    .h3 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+@media(max-width:809px) {
+    .glyphicon {
+        position: relative;
+        top: 4px;
+        display: inline-block;
+        font-family: 'Glyphicons Halflings';
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+    }
+    .menu-button {
+        position: relative;
+        top: 4px;
+        z-index: 1000;
+        padding: 0;
+        width: 2em;
+        height: 1.2em;
+        border: none;
+        text-indent: 2.8em;
+        font-size: 1.2em;
+        color: transparent;
+        background: transparent;
+        outline: none;
+        /* margin: .5em 0; */
+    }
+}
+
+@media(max-width:639px) {
+    .cp-menu-icon,
+    .cp-login {
+        float: left;
+        width: 20%;
+        padding: 5px 0;
+    }
+    .cp-logo h2 {
+        font-size: 1.1em;
+    }
+    .menu-button {
+        position: relative;
+        top: 3px;
+        z-index: 1000;
+        padding: 0;
+        width: 2.5em;
+        height: 1.3em;
+        border: none;
+        text-indent: 2.8em;
+        font-size: 0.8em;
+        color: transparent;
+        background: transparent;
+        outline: none;
+    }
+    .cp-header {
+        padding: 0.5em 1em;
+    }
+}
+
+.cp-login a.sign-in span {
+    font-size: 1.3em;
+    color: #2bbb61;
+    font-weight: 600;
+}

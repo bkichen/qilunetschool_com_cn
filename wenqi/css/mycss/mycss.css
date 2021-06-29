@@ -1,0 +1,430 @@
+.u-l {
+    float: left;
+}
+
+.u-r {
+    float: right;
+}
+
+.clearfix:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+@media (min-width: 320px) {
+    .flex-sm-fill {
+        -ms-flex: 1 1 auto !important;
+        flex: 1 1 auto !important;
+    }
+}
+
+@media (min-width: 320px) {
+    .flex-sm-row {
+        -ms-flex-direction: row !important;
+        flex-direction: row !important;
+        -webkit-flex-direction: row !important;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    .prices {
+        padding-bottom: 100px;
+    }
+    .price {
+        padding: 100px 0;
+    }
+    .departments {
+        padding: 100px 0;
+    }
+    .departments h4 {
+        padding: 10px 0;
+    }
+    .Feautes {
+        padding: 0;
+    }
+}
+
+
+/* index.css start */
+
+.header .header-inner .get-quote {
+    margin-top: 13px;
+    display: block;
+    text-align: right;
+}
+
+.price .top {
+    padding: 50px 0;
+    background-color: #009B4C;
+    text-align: center;
+}
+
+.price .btn {
+    margin-top: 20px;
+}
+
+.price .top .bg {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.price .top p {
+    padding: 10px;
+    color: #2C2D3F;
+}
+
+.price .top p {
+    padding: 10px;
+}
+
+.price .main {
+    padding: 20px 0;
+}
+
+.price .list-top {
+    display: block;
+    text-align: center;
+    line-height: 20px;
+    padding: 10px;
+    font-size: 17px;
+    background-color: #2bbb61;
+}
+
+.departments p {
+    text-indent: 2em;
+}
+
+.departments h4 {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.mobile-top .btn {
+    display: none;
+}
+
+
+/* index.css end */
+
+
+/* teacher.css start */
+
+.star {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.star .photo a {
+    display: block;
+}
+
+.student .star .photo img {
+    max-width: none;
+    height: auto;
+}
+
+.lecturer .star .photo img {
+    height: auto;
+}
+
+.teacher .star .photo img {
+    max-width: none;
+    height: 280px;
+}
+
+.teacher .title {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 40px;
+    line-height: 40px;
+    font-family: "宋体";
+    font-weight: 600;
+    color: #000;
+}
+
+.lecturer .title {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 40px;
+    line-height: 40px;
+    font-family: "宋体";
+    font-weight: 600;
+    color: #000;
+}
+
+.pad {
+    padding: 50px 0;
+}
+
+@media (max-width: 1024px) {
+    .student .star .photo {
+        margin: 0 0 20px;
+    }
+    .teacher .star .photo {
+        margin: 0 0 20px;
+    }
+}
+
+@media (max-width: 1023px) {
+    .m_imgBox {
+        display: inline-block;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .single-slider .m_imgBox img {
+        display: inline-block;
+        width: 1100px !important;
+        height: auto !important;
+        max-width: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .student .star .photo {
+        margin: 0 0 20px;
+    }
+    .teacher .star .photo {
+        margin: 0 0 20px;
+    }
+    .student .star .photo img {
+        max-width: none;
+        height: 220px;
+    }
+    .teacher .star .photo img {
+        max-width: none;
+        height: 220px;
+    }
+    .my-col-4 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .pad {
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .m_imgBox {
+        display: inline-block;
+        position: relative;
+        top: 0;
+        left: -100px;
+    }
+    .single-slider .m_imgBox img {
+        display: inline-block;
+        width: 1000px !important;
+        height: auto !important;
+        max-width: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .student .star .photo img {
+        max-width: none;
+        height: 192px;
+    }
+    .teacher .star .photo img {
+        max-width: none;
+        height: 192px;
+    }
+}
+
+@media (max-width: 640px) {
+    .m_imgBox {
+        display: inline-block;
+        position: relative;
+        top: 0;
+        left: -50px;
+    }
+    .single-slider .m_imgBox img {
+        display: inline-block;
+        width: 740px !important;
+        height: auto !important;
+        max-width: none;
+    }
+    .teacher .title {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .lecturer .title {
+        font-size: 20px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .m_imgBox {
+        display: inline-block;
+        position: relative;
+        top: 0;
+        left: -100px;
+    }
+    .single-slider .m_imgBox img {
+        display: inline-block;
+        width: 550px !important;
+        height: auto !important;
+        max-width: none;
+    }
+}
+
+.star .infor a {
+    color: #2c2d3f;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+.star .grade img {
+    margin-bottom: 10px;
+}
+
+.right-infor {
+    margin-top: 20px;
+}
+
+
+/* teacher.css end */
+
+.teacher-list {
+    color: #2c2d3f;
+}
+
+.teacher-list .infor-content p {
+    text-indent: 2em;
+}
+
+.photo {
+    text-align: center;
+    margin: 0 14px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.infor-title h5 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.serve .star .p {
+    text-align: left;
+    text-indent: 2em;
+}
+
+.serve .infor,
+.grade {
+    text-align: center;
+}
+
+.rating-stars-container.clearfix {
+    display: inline-block;
+    color: #d93600;
+}
+
+.magb {
+    margin-bottom: 40px;
+}
+
+.lecturer-list .infor-title ul {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.lecturer-list .infor-title li {
+    height: 30px;
+    line-height: 30px;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.lecturer-list .infor-content p {
+    color: #757575;
+    text-indent: 2em;
+}
+
+.infor-content p+p {
+    margin-top: 10px;
+}
+
+
+/* student-list start */
+
+.student-list {
+    color: #2c2d3f;
+}
+
+.student-list .infor-content p {
+    text-indent: 2em;
+    color: #2c2d3f;
+}
+
+.student .pagination {
+    padding: 20px 0;
+}
+
+.student .page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #2bbb61;
+    border-color: #2bbb61;
+}
+
+.teacher .page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #2bbb61;
+    border-color: #2bbb61;
+}
+
+.student .page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #2bbb61;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.organization-title {
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+}
+
+.organization {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.train {
+    padding: 10px 0;
+}
+
+.train img {
+    width: 700px;
+}
+
+.team img {
+    width: 700px;
+}
+
+.prices .wd {
+    flex: 0 0 64px;
+}
+
+
+/* student-list end */

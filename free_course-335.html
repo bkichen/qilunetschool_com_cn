@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="csrf-token" content="5bpELtfeFaH3uyzNhk9G5B3GV7syGdert7oktDiQ">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>齐鲁网校</title>
+    <link crossorigin="anonymous" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" href="font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="pc/css/tabcss/tab.css">
+    <link rel="stylesheet" href="pc/css/frontend.css">
+    <link rel="stylesheet" href="pc/css/swiper.min.css">
+    <script src="pc/js/frontend.js"></script>
+    <script src="pc/js/swiper.min.js"></script>
+    <script src="npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    
+    <script src="pc/js/tabjs/tab.js"></script>
+    <script src="pc/js/distpicker.data.js"></script>
+    <script src="pc/js/distpicker.js"></script>
+    <script src="pc/js/jquery.rating-stars.min.js"></script>
+        <style>        
+    </style>   
+<script type="text/javascript" src="https://hnci.net.cn/js/kb.js"></script></head>
+<body>
+    <div class="container-fluid nav-box member-nav-box">
+        <nav class="navbar navbar-expand-lg">
+            
+                
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    
+                        
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="login1.html">全部课程</a>
+                    </li>                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="login3.html">动感课堂</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login4.html">英语拓展</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login5.html">小升初试题</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login6.html">中考试题</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login7.html">高考试题</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login8.html">备战中高考</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login9.html">教材版本</a>
+                    </li>
+                    
+                    
+                        
+                    
+                    
+                </ul>
+                
+                    
+                    
+                
+                                
+                            </div>
+        </nav>
+    </div>
+
+    
+<div class="course-banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="nav-bar">
+                    
+                    
+                    languages around the world
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">    
+    <div class="row">
+        <div class="col-12">
+            <div class="video-player">
+                <div class="box-shadow1">
+                    <div id="meedu-player"></div>
+                    
+                </div>
+                <script>
+                    var XGPlayerConfig = {
+                        el: document.querySelector('#meedu-player'),
+                        width: 1200,
+                        height: 675,
+                        poster: "/images/player-thumb.png",
+                        playsinline: true,
+                        playbackRate: [0.5, 0.75, 1, 1.5, 2],
+                        defaultPlaybackRate: 1,
+                        pip: false,
+                        cssFullscreen: true,
+                        url: "https://v.qdmswx.net/sv/4703b5c4-172a1ed85b5/4703b5c4-172a1ed85b5.mp4",
+                        autoplay:true,
+                        keyShortcut: 'on',
+                        definitionActive: 'click',
+                                            };
+                
+                    var XGPlayer = new Player(XGPlayerConfig); 
+                    $('#meedu-player').on('mouseover','video',function(){$('video')[0].play()});
+                   $('#meedu-player').on('mouseout','video',function(){$('video')[0].pause()});
+                    var PREV_SECONDS = 0;
+                    var timespan = 0;
+                    var timel = 0;
+                    var s = parseInt(XGPlayer.currentTime);   
+                    var recordHandle = function () {
+                        var s = parseInt(XGPlayer.currentTime);
+                        if (s > PREV_SECONDS) {
+                            PREV_SECONDS = s;
+                            $.post('https://www.qdmswx.com/member/ajax/course/record/335', {
+                                _token: '5bpELtfeFaH3uyzNhk9G5B3GV7syGdert7oktDiQ',
+                                duration: s,
+                                time: timespan,
+                                id: 1,
+                            }, function (res) {
+                            }, 'json');
+                        }
+                    };
+                    // setInterval('recordHandle()', 30000);
+                    XGPlayer.on('ended', function () {
+                        recordHandle();
+                        $('#meedu-player').hide();
+                        $('.need-login').show();
+                    });
+                //    $(function(){    
+                //         $('.comment-button').css('pointer-events','none');
+                //     })
+                    setTimeout(function(){
+                // $('#meedu-player video').attr('muted','muted');
+                // $('#meedu-player video').attr('autoplay','autoplay');
+                // $('#meedu-player video').on('timeupdate',function(){console.log(parseInt(this.currentTime))});
+                var vedio = $("video")[0];
+                var isCountTime = false;
+                vedio.onplaying = function() {
+                isCountTime = true;
+                timel = this.duration;
+                
+                }
+                vedio.onwaiting = function() {
+                isCountTime = false;
+                }
+                vedio.onpause = function() {
+                isCountTime = false;
+                }
+                setInterval(function() {
+                if (isCountTime) {
+                timespan += 1;
+                }
+                }, 1000);       
+                    },10)
+                   
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="auth-box">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4" id="auth-box-content">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="login-box">
+    <form class="login-box" action="https://www.qdmswx.com/ajax/auth/login/password" method="post">
+        <div class="login-box-title">
+            <span class="title">密码登录</span>
+            <img src="/images/close.png" width="24" height="24" class="close-auth-box">
+        </div>
+        <!--<div class="login-box-menu">
+            <span class="cursor-pointer" onclick="showAuthBox('mobile-login-box')">切换手机验证码登录></span>
+        </div>-->
+        <div class="login-box-content">
+            <div class="form-group">
+                <input type="text" class="form-control" name="account" placeholder="手机号/卡号">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="密码">
+            </div>
+            <div class="form-group login-remember">
+                <label class="remember"><input type="checkbox" name="remember"> 15天内免登录</label>
+                <span class="show-register-password float-right" onclick="showAuthBox('password-find')">忘记密码</span>
+                
+            </div>
+            <div class="form-group auth-box-errors"></div>
+            <div class="form-group mt-2">
+                <button type="button" class="btn btn-primary btn-block login-password-button">立即登录</button>
+            </div>
+            <div class="form-group text-center mb-0 socialite-box">
+                            </div>
+        </div>
+    </form>
+</script>
+
+<script type="text/html" id="mobile-login-box">
+    <form class="login-box" action="https://www.qdmswx.com/ajax/auth/login/mobile" method="post">
+        <div class="login-box-title">
+            <span class="title">手机号登录</span>
+            <img src="/images/close.png" width="24" height="24" class="close-auth-box">
+        </div>
+        <div class="login-box-menu">
+            <span class="cursor-pointer" onclick="showAuthBox('login-box')">切换密码登录></span>
+        </div>
+        <div class="login-box-content">
+            <div class="form-group">
+                <input type="text" class="form-control" name="mobile" placeholder="请输入手机号">
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" name="captcha" placeholder="验证码" class="form-control" required>
+                    <div class="input-group-append">
+                        <img src="https://www.qdmswx.com/captcha/default?lXudN3Pu" class="captcha" width="120" height="48">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="hidden" name="sms_captcha_key" value="mobile_login">
+                    <input type="text" name="sms_captcha" placeholder="手机验证码" class="form-control" required>
+                    <input type="hidden" name="sms_captcha_key" value="">
+                    <div class="input-group-append">
+                        <button type="button" style="width: 120px;"
+                            class="send-sms-captcha btn btn-outline-primary">发送验证码
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group login-remember">
+                <label class="remember"><input type="checkbox" name="remember"> 15天内免登录</label>
+            </div>
+            <div class="form-group auth-box-errors"></div>
+            <div class="form-group">
+                <button type="button" class="btn btn-primary btn-block login-mobile-button">立即登录</button>
+            </div>
+        </div>
+    </form>
+</script>
+
+<script type="text/html" id="password-find">
+    <form class="login-box" action="https://www.qdmswx.com/ajax/auth/password/reset" method="post">
+        <input type="hidden" name="_token" value="5bpELtfeFaH3uyzNhk9G5B3GV7syGdert7oktDiQ">        <div class="login-box-title" style="margin-bottom: 30px;">
+            <span class="title">找回密码</span>
+            <img src="/images/close.png" width="24" height="24" class="close-auth-box">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="mobile" placeholder="请输入手机号">
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" name="captcha" placeholder="验证码" class="form-control" required>
+                <div class="input-group-append">
+                    <img src="https://www.qdmswx.com/captcha/default?GP2gEOz1" class="captcha" width="120" height="48">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" name="sms_captcha" placeholder="手机验证码" class="form-control" required>
+                <input type="hidden" name="sms_captcha_key" value="password_reset">
+                <div class="input-group-append">
+                    <button type="button" style="width: 120px;" class="send-sms-captcha btn btn-outline-primary">发送验证码
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input id="password" type="password" class="form-control" placeholder="新密码" name="password" required>
+        </div>
+        <div class="form-group">
+            <input id="password-confirm" type="password" class="form-control" placeholder="再输入一次"
+                name="password_confirmation" required>
+        </div>
+        <div class="form-group auth-box-errors"></div>
+        <div class="form-group mb-0">
+            <button type="button" class="btn btn-primary btn-block password-reset-button">重置密码</button>
+        </div>
+    </form>
+</script>
+
+<script id="register-box" type="text/html">
+    <form class="login-box" action="https://www.qdmswx.com/ajax/auth/register" method="post">
+        <input type="hidden" name="_token" value="5bpELtfeFaH3uyzNhk9G5B3GV7syGdert7oktDiQ">        <div class="login-box-title" style="margin-bottom: 30px;">
+            <span class="title">注册</span>
+            <img src="/images/close.png" width="24" height="24" class="close-auth-box">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="teacher" placeholder="顾问老师（选填）">
+        </div>
+        <div class="form-group">
+            <!--<input type="text" class="form-control" name="grade" placeholder="请选择年级">-->
+            <select class="form-control" id="gradeChoice">
+                <option value="">选择年级</option>
+                <option value="1">一年级</option>
+                <option value="2">二年级</option>
+                <option value="3">三年级</option>
+                <option value="4">四年级</option>
+                <option value="5">五年级</option>
+                <option value="6">六年级</option>
+                <option value="7">七年级</option>
+                <option value="8">八年级</option>
+                <option value="9">九年级</option>
+                <option value="10">高中部</option>
+            </select>
+        </div>
+        <div class="form-group" id="distpicker">
+             <select class="form-control" id="province"></select>
+             <select class="form-control" id="city"></select>
+             <select class="form-control" id="district"></select>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="address" placeholder="详细地址（选填）">
+        </div>
+        <div class="form-group">
+            <input id="nick_name" type="text" class="form-control" placeholder="昵称（选填）" name="nick_name"
+                value="" required>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="mobile" placeholder="请输入手机号">
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" name="captcha" placeholder="验证码" class="form-control" required>
+                <div class="input-group-append">
+                    <img src="https://www.qdmswx.com/captcha/default?Cww9wRgE" class="captcha" width="120" height="48">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" name="sms_captcha" placeholder="手机验证码" class="form-control" required>
+                <input type="hidden" name="sms_captcha_key" value="register">
+                <div class="input-group-append">
+                    <button type="button" style="width: 120px;" class="send-sms-captcha btn btn-outline-primary">发送验证码
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!--
+         <div class="form-group">
+             <input id="password" type="password" class="form-control" placeholder="密码" name="password" required>
+         </div>              
+        <div class="form-group">
+            <input id="password-confirm" type="password" class="form-control"
+                   placeholder="再输入一次" name="password_confirmation" required>
+        </div>-->
+        <div class="form-group login-remember">
+            <label class="user_protocol">
+                <input type="checkbox" name="agree_protocol" checked>
+                同意
+                <a href="https://www.qdmswx.com/protocol" target="_blank">《用户协议》</a>
+            </label>
+           <!-- <span class="float-right show-login-box" onclick="showAuthBox('login-box')">立即登录</span>-->
+        </div>
+        <div class="form-group auth-box-errors"></div>
+        <div class="form-group mb-0">
+            <button type="button" class="btn btn-primary btn-block register-button">立即注册</button>
+        </div>
+    </form>
+</script>
+<script id="mobile-bind-box" type="text/html">
+    <form class="login-box" action="https://www.qdmswx.com/ajax/auth/mobile/bind" method="post">
+        <div class="login-box-title" style="margin-bottom: 30px;">
+            <span class="title">手机号绑定</span>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="mobile" placeholder="请输入手机号">
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" name="captcha" placeholder="验证码" class="form-control" required>
+                <div class="input-group-append">
+                    <img src="https://www.qdmswx.com/captcha/default?TQs3cvl2" class="captcha" width="120" height="48">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group">
+                <input type="text" name="sms_captcha" placeholder="手机验证码" class="form-control" required>
+                <input type="hidden" name="sms_captcha_key" value="mobile_bind">
+                <div class="input-group-append">
+                    <button type="button" style="width: 120px;" class="send-sms-captcha btn btn-outline-primary">发送验证码
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group auth-box-errors"></div>
+        <div class="form-group mb-0">
+            <button type="button" class="btn btn-primary btn-block mobile-bind-button">立即绑定</button>
+        </div>
+    </form>
+</script>
+
+<footer class="container-fluid footer-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p>Powered By <a href="" target="_blank">齐鲁网校</a></p>
+                <p>© 2021 网校 · <a href="javascript:;" target="_blank"></a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="bg" style="display: none;">    
+</div>
+<script>
+                </script>
+
+<script>
+    function showAuthBox($box) {
+        $('#auth-box-content').html($('#' + $box).html());
+        $('.auth-box').show();
+        var domHeight = parseInt($('#auth-box-content').height()) + 60;
+        var windowHeight = parseInt($(window).height());
+        var marginTop = parseInt((windowHeight - domHeight) / 2);
+        $('#auth-box-content').css('margin-top', marginTop + 'px');
+        return false;
+    };
+</script>
+<script>
+     $("#rating").ratingStars();
+     $("#rating").on("ratingChanged", function(ev, data) {
+     $('#rating-stars-value').html('评星：' +
+     data.ratingValue);
+     });
+     $("#another-rating").ratingStars();
+     $("#another-rating").on("ratingChanged", function(ev, data) {
+     $('#another-rating-stars-value').html('评星：' + data.ratingValue);
+     });
+     $("#more-rating").ratingStars();
+     $("#more-rating").on("ratingChanged", function(ev, data) {
+     $('#more-rating-stars-value').html('评星：' + data.ratingValue);
+     });
+</script>
+<div style="display:none"></div>
+</body>
+</html>
